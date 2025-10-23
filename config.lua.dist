@@ -57,15 +57,15 @@ cleanProtectionZones = false
 -- NOTE: maxPlayers set to 0 means no limit
 -- NOTE: MaxPacketsPerSeconds if you change you will be subject to bugs by WPE, keep the default value of 25,
 -- It's recommended to use a range like min 50 in this function, otherwise you will be disconnected after equipping two-handed distance weapons.
-ip = "127.0.0.1"
-allowOldProtocol = false
+ip = "192.168.0.75"
+allowOldProtocol = true
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-serverName = "OTServBR-Global"
-serverMotd = "Welcome to the OTServBR-Global!"
+serverName = "Supreme OT"
+serverMotd = "Welcome to the Supreme OT!"
 statusTimeout = 5 * 1000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 25
@@ -217,7 +217,7 @@ hazardSpawnPlunderMultiplier = 25
 loyaltyEnabled = true
 loyaltyPointsPerCreationDay = 1
 loyaltyPointsPerPremiumDaySpent = 0
-loyaltyPointsPerPremiumDayPurchased = 0
+loyaltyPointsPerPremiumDayPurchased = 1
 loyaltyBonusPercentageMultiplier = 1.0
 
 -- Custom PvP system
@@ -322,7 +322,7 @@ staminaOrangeDelay = 1
 staminaGreenDelay = 5
 staminaPzGain = 1
 -- Max players allowed on a dummy.
-maxAllowedOnADummy = 1
+maxAllowedOnADummy = 10
 
 -- Save interval per time
 -- NOTE: toggleSaveInterval: true = enable the save interval, false = disable the save interval
@@ -331,9 +331,9 @@ maxAllowedOnADummy = 1
 -- NOTE: toggleSaveIntervalCleanMap: true = enable the clean map, false = disable the clean map
 -- NOTE: saveIntervalTime: time based on what was set in "saveIntervalType"
 toggleSaveAsync = false
-toggleSaveInterval = true
+toggleSaveInterval = false
 saveIntervalType = "hour"
-toggleSaveIntervalCleanMap = true
+toggleSaveIntervalCleanMap = false
 saveIntervalTime = 1
 
 -- Imbuement
@@ -367,15 +367,15 @@ Setting this to false may pose risks; if a house is abandoned and contains a lar
 -- Periods: daily/weekly/monthly/yearly/never
 -- Base: sqm,rent,sqm+rent
 toggleCyclopediaHouseAuction = true
-daysToCloseBid = 7
+daysToCloseBid = 2
 housePriceRentMultiplier = 0.0
 housePriceEachSQM = 1000
-houseRentPeriod = "monthly"
+houseRentPeriod = "weekly"
 houseRentRate = 1.0
 houseOwnedByAccount = false
-houseBuyLevel = 100
+houseBuyLevel = 300
 housePurchasedShowPrice = false
-houseLoseAfterInactivity = 30 -- days; 0 = never
+houseLoseAfterInactivity = 7 -- days; 0 = never
 onlyInvitedCanMoveHouseItems = true
 togglehouseTransferOnRestart = true
 
@@ -419,10 +419,10 @@ checkExpiredMarketOffersEachMinutes = 60
 maxMarketOffersAtATimePerPlayer = 100
 
 -- MySQL
-mysqlHost = "127.0.0.1"
-mysqlUser = "root"
-mysqlPass = "root"
-mysqlDatabase = "otservbr-global"
+mysqlHost = "192.168.0.60"
+mysqlUser = "canaryAdm"
+mysqlPass = "Fisher456#"
+mysqlDatabase = "otservCanary"
 mysqlDatabaseBackup = false
 mysqlPort = 3306
 mysqlSock = ""
@@ -493,7 +493,7 @@ globalServerSaveNotifyDuration = 5
 globalServerSaveCleanMap = false
 globalServerSaveClose = false
 globalServerSaveShutdown = true
-globalServerSaveTime = "06:00:00"
+globalServerSaveTime = "10:00:00"
 
 -- Sort loot by chance, most rare items drop first
 -- it is good to be setted when you have a higher
@@ -506,7 +506,7 @@ sortLootByChance = false
 -- NOTE: rateExp, rateSkill and rateMagic is used when 'rateUseStages = false' - or a fallback only
 -- To configure rates see file data/stages.lua
 -- lowLevelBonusExp works up to level 50
-rateUseStages = false
+rateUseStages = true
 lowLevelBonusExp = 50
 rateExp = 1
 rateSkill = 1
@@ -591,8 +591,8 @@ discordWebhookDelayMs = 1000
 -- 		If you use 'vipFamiliarTimeCooldownReduction' greater than half of 'familiarTime', it will get the highest possible value, in this case 15
 -- NOTE: GainCoin function, please configure script: data-otservbr-global/scripts/globalevents/vip/online_coins.lua
 -- NOTE: GainToken function, please configure script: data-otservbr-global/scripts/globalevents/vip/online_tokens.lua
-vipSystemEnabled = false
-vipBonusExp = 0
+vipSystemEnabled = true
+vipBonusExp = 10
 vipBonusLoot = 0
 vipBonusSkill = 0
 vipAutoLootVipOnly = false
