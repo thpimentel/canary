@@ -20,11 +20,11 @@ function playerLogin.onLogin(player)
 			player:setOutfit({ lookType = 136, lookHead = 114, lookBody = 120, lookLegs = 132, lookFeet = 115, lookAddons = 0 })
 		end
 
-		if home and not player:isPremium() then
-			setHouseOwner(home, 0)
-			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "You have lost your house because you are no longer a premium account.")
-			player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Your items from the house have been sent to your inbox.")
-		end
+		-- if home and not player:isPremium() then
+		-- 	setHouseOwner(home, 0)
+		-- 	player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "You have lost your house because you are no longer a premium account.")
+		-- 	player:sendTextMessage(MESSAGE_GAME_HIGHLIGHT, "Your items from the house have been sent to your inbox.")
+		-- end
 	end
 
 	-- Open channels
